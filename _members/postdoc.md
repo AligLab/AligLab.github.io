@@ -1,6 +1,6 @@
 ---
 name: Ngoc Khanh Tran, PhD
-role: Postdoctrol Researcher
+role: Postdoctoral Researcher
 order: 4
 image: /assets/img/dummy.png
 email: ngoc.tran@uk-essen.de
