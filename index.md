@@ -138,10 +138,10 @@ title: Alig Lab
 
 <section id="funding" class="py-5">
   <div class="container">
-    <div class="row justify-content-start">
-      <div class="col-lg-9 offset-lg-1">
-        <h2>Funding</h2>
-        <div class="mt-4 text-center">
+    <h2>Funding</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
+        <div class="mt-4 text-end">
           <img src="{{ '/assets/img/max-eder.png' | relative_url }}"
                alt="Funding Organization Logo"
                class="img-fluid d-inline-block"
@@ -154,6 +154,7 @@ title: Alig Lab
     </div>
   </div>
 </section>
+
 
 
 <section id="contact" class="py-5">
