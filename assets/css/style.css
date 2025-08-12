@@ -116,6 +116,6 @@ section { background: transparent; }
 }
 
 html {
-  scroll-padding-top: 80px; /* adjust this to match your navbar height */
+  scroll-padding-top: 50px; /* adjust this to match your navbar height */
 }
 
