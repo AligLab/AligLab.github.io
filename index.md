@@ -27,7 +27,7 @@ title: Alig Lab
   <div class="container text-center">
     <h2>Team</h2>
 
-    {%- assign leader = site.members | where: "role", "Group Leader and Clinician Scientist" -%}
+    {%- assign leader = site.members | where: "role", "Group Leader &<br>Clinician Scientist" -%}
     <div class="row justify-content-center mb-4">
       {%- for person in leader -%}
       <div class="col-6 col-md-4 col-lg-3">
@@ -55,7 +55,7 @@ title: Alig Lab
       {%- endfor -%}
     </div>
 
-    {%- assign others = site.members | where_exp: "p", "p.role != 'Group Leader and Clinician Scientist'" | sort: "order" -%}
+    {%- assign others = site.members | where_exp: "p", "p.role != 'Group Leader &<br>Clinician Scientist'" | sort: "order" -%}
     <div class="row g-3 justify-content-center">
       {%- for person in others -%}
       <div class="col-6 col-md-4 col-lg-3">
