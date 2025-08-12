@@ -91,7 +91,6 @@ section { background: transparent; }
 .funding-logo {
   max-height: 250px; /* change this value to resize */
   width: auto;
-  #display: inline-block;
 }
 
 .funding-text {
