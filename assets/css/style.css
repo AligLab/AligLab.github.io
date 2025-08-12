@@ -1,0 +1,90 @@
+---
+---
+/* Base */
+html, body { height: 100%; }
+body {
+  scroll-behavior: smooth;
+  background: #f7f7f9; /* neutral background for all sections */
+}
+
+.card img { object-fit: cover; height: 180px; }
+main.container { max-width: 1100px; }
+
+/* Hero */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: white;
+  background:
+    linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+    url('{{ "/assets/img/test2.png" | relative_url }}') center/cover no-repeat;
+}
+.hero-inner {
+  width: 100%;
+  padding: 6rem 1rem 4rem;
+}
+.hero h1 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: .5rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,.5);
+}
+.hero p {
+  max-width: 900px;
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  margin: 0;
+  text-shadow: 0 2px 6px rgba(0,0,0,.5);
+}
+
+/* Optional: add subtle section contrast */
+section { background: transparent; }
+#about, #team, #publications, #funding, #contact { background: #ffffff; }
+
+/* Round team images and zoom out a bit */
+#team .card img {
+  border-radius: 50%;           /* makes them circular */
+  object-fit: cover;            /* fill the circle */
+  height: 180px;                 /* fixed height */
+  width: 180px;                  /* fixed width */
+  margin: 0 auto;                /* center horizontally */
+  object-position: center top;   /* adjust vertical crop if needed */
+  transform: scale(0.9);         /* zoom out slightly */
+}
+
+.info-block {
+  background-color: #f5f5f5;  /* light background */
+  border: 1px solid #ddd;     /* straight edges */
+  padding: 1rem 1.5rem;       /* inner spacing */
+  margin: 2rem auto;          /* vertical + centered horizontally */
+  max-width: 800px;           /* limit width */
+}
+
+#publications a {
+  color: black;
+  text-decoration: none;
+}
+
+#publications a:hover {
+  color: #0d6efd; /* Bootstrap blue */
+  
+}
+
+.card-body a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-body a:hover {
+  color: #0d6efd; /* Bootstrap primary blue on hover */
+}
+
+/* Keep LinkedIn blue all the time */
+.card-body a[href*="linkedin.com"] {
+  color: #0a66c2; /* LinkedIn brand color */
+}
+.card-body a[href*="linkedin.com"]:hover {
+  color: #084182; /* Darker blue on hover */
+}
+
+

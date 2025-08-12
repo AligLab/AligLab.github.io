@@ -1,0 +1,30 @@
+title: The Alig Lab
+description: Short tagline
+url: "https://aliglab.github.io"
+baseurl: "/AligLab"
+markdown: kramdown
+theme: null
+plugins: []
+collections:
+  members:
+    output: true
+    permalink: /team/:name/
+nav:
+  - title: About
+    href: "#about"
+  - title: Team
+    href: "#team"
+  - title: Publications
+    href: "#publications"
+  - title: Funding
+    href: "#funding"
+  - title: Contact
+    href: "#contact"
+# Contact and social
+email: stefan.alig@uk-essen.de           # or your user/org
+twitter: StefanAlig        # no @
+linkedin: in/stefan-alig-0475a3108
+
+
+scholar_url: https://scholar.google.com/citations?user=MPsqUxsAAAAJ&hl=en
+ncbi_url: https://www.ncbi.nlm.nih.gov/myncbi/1XmPXUZ33kwkH/bibliography/public/

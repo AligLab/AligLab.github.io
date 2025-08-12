@@ -1,0 +1,11 @@
+- title: Example paper title
+  authors: A. Author, B. Author
+  venue: Journal Name
+  year: 2024
+  url: https://doi.org/10.0000/example
+
+- title: Another paper
+  authors: C. Author, D. Author
+  venue: Conference XYZ
+  year: 2023
+  url: https://pubmed.ncbi.nlm.nih.gov/
