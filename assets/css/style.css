@@ -89,19 +89,18 @@ section { background: transparent; }
 
 
 .funding-header {
-  display: flex;
-  align-items: center; /* vertical alignment */
-  gap: 20px; /* space between text and logo */
+  display: block; /* stack elements vertically */
 }
 
 .funding-logo {
-  max-height: 80px; /* adjust size */
+  max-height: 120px; /* adjust to make it bigger */
   width: auto;
+  margin-top: 10px; /* space between text and logo */
 }
-
 
 .funding-text {
-  max-width: 600px; /* controls the block width */
-  margin: 0 auto;   /* centers the block */
-  text-align: justify; /* makes it a block style paragraph */
+  max-width: 600px; /* control text block width */
+  margin: 0; /* keep left aligned */
+  text-align: justify; /* paragraph block style */
 }
+
