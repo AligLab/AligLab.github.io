@@ -1,6 +1,6 @@
 ---
-name: Dr. Stefan Alig
-role: Group Leader
+name: Dr. Stefan Alig, MD
+role: Clinician scientist<br>Group Leader
 order: 1
 image: /assets/img/alig.jpeg
 email: stefan.alig@uk-essen.de
