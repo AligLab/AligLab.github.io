@@ -27,7 +27,7 @@ title: Alig Lab
   <div class="container text-center">
     <h2>Team</h2>
 
-    {%- assign leader = site.members | where: "role", "Group Leader" -%}
+    {%- assign leader = site.members | where: "role", "Group Leader and Clinician Scientist" -%}
     <div class="row justify-content-center mb-4">
       {%- for person in leader -%}
       <div class="col-6 col-md-4 col-lg-3">
