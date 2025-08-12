@@ -115,4 +115,7 @@ section { background: transparent; }
   .funding-logo { max-height: 100px; }
 }
 
+html {
+  scroll-padding-top: 80px; /* adjust this to match your navbar height */
+}
 
