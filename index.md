@@ -16,12 +16,7 @@ title: Alig Lab
       <div class="col-lg-9">
         <h2 class="text-center">About us</h2>
         <p class="mt-4" style="text-align: justify;">
-          The Alig Lab advances liquid biopsy and precision medicine to better understand, monitor, and treat lymphoma. 
-          Based at the West German Cancer Center and NCT West, University Hospital Essen, we develop ultrasensitive 
-          ctDNA technologies to improve diagnosis, disease monitoring, and treatment strategies. We integrate liquid 
-          biopsy–based genomic profiling, computational analysis, and pre-clinical functional models to decipher 
-          molecular heterogeneity, track clonal evolution, and detect minimal residual disease, aiming to uncover 
-          resistance mechanisms and guide individualized patient care.
+          The Alig Lab advances liquid biopsy and precision medicine to improve the understanding, monitoring, and treatment of lymphoma. Based at the Department of Hematology, University Hospital Essen, we develop ultrasensitive circulating tumor DNA (ctDNA) technologies to enhance diagnosis and response assessment. By combining genomic profiling, computational analysis, and pre-clinical functional models, we investigate molecular heterogeneity, track clonal evolution, and detect minimal residual disease, aiming to uncover resistance mechanisms and guide individualized patient care.
         </p>
       </div>
     </div>
