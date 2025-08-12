@@ -92,29 +92,27 @@ section { background: transparent; }
   display: block; /* stack elements vertically */
 }
 
+/* Funding section */
+.funding-text {
+  max-width: 800px;
+  margin: 0;              /* left-aligned under the H2 */
+  text-align: justify;
+}
+
 .funding-logo {
-  display: block;          /* ensures it sits on its own line */
-  max-height: 160px;       /* desktop size */
+  display: block;         /* on its own line under the text */
   width: auto;
-  margin-top: 10px;        /* space between text and logo */
+  height: auto;
+  max-height: 160px;      /* desktop size */
+  max-width: 100%;        /* never overflow on mobile */
+  margin-top: 12px;
 }
 
 @media (max-width: 768px) {
-  .funding-logo {
-    max-height: 120px;     /* slightly smaller on tablets/phones */
-  }
+  .funding-logo { max-height: 120px; }
 }
-
 @media (max-width: 480px) {
-  .funding-logo {
-    max-height: 100px;     /* smallest size for very small screens */
-  }
+  .funding-logo { max-height: 100px; }
 }
 
-
-.funding-text {
-  max-width: 600px; /* control text block width */
-  margin: 0; /* keep left aligned */
-  text-align: justify; /* paragraph block style */
-}
 
