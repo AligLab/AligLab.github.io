@@ -146,7 +146,7 @@ title: Alig Lab
         </p>
 
         <!-- Logo -->
-        <img src="{{ '/assets/img/DKH_Logo_RGB_640x360px_72dpi.jpg' | relative_url }}"
+        <img src="{{ '/assets/img/DKH.jpg' | relative_url }}"
              alt="Funding Organization Logo"
              class="funding-logo mt-3">
 
