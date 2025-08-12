@@ -133,27 +133,31 @@ title: Alig Lab
 
 <section id="funding" class="py-5">
   <div class="container">
-    <div class="row justify-content-start">
+    <div class="row">
       <div class="col-lg-10 offset-lg-1">
-        <h2>Funding</h2>
-
-         <!-- Text -->
-        <p class="mt-4 text-justify">
-          Our lab is funded by the Max-Eder Junior Research Group Program of the German Cancer Aid (Deutsche Krebshilfe).      
         
-        <!-- Logo -->
-        <div class="mt-4 text-center">
-          <img src="{{ '/assets/img/DKH.jpg' | relative_url }}"
+          <!-- Text -->
+        <p class="funding-text mt-3">
+        Our lab is funded by the Max-Eder Junior Research Group Program of the German Cancer Aid (Deutsche Krebshilfe).
+        </p>
+        
+        
+        
+        <!-- Heading + Logo -->
+        <div class="funding-header">
+          <h2>Funding</h2>
+          <img src="{{ '/assets/img/DKH_Logo_RGB_640x360px_72dpi.jpg' | relative_url }}"
                alt="Funding Organization Logo"
                class="funding-logo">
         </div>
 
-       
-        </p>
+      
+
       </div>
     </div>
   </div>
 </section>
+
 
 
 
