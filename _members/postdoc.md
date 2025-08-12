@@ -1,5 +1,5 @@
 ---
-name: Ngoc Khanh Tran, PhD
+name: Dr. Ngoc Khanh Tran, PhD
 role: Postdoctrol Researcher
 order: 3
 image: /assets/img/dummy.png
