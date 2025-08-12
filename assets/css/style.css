@@ -88,3 +88,10 @@ section { background: transparent; }
 }
 
 
+#funding img {
+  max-width: 180px; /* adjust for size */
+  height: auto;     /* maintain aspect ratio */
+  display: block;
+  margin: 0 auto;   /* center logo */
+}
+
