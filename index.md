@@ -141,11 +141,11 @@ title: Alig Lab
     <h2>Funding</h2>
     <div class="row justify-content-center">
       <div class="col-lg-10">
-        <div class="mt-4 text-end">
+        <div class="mt-4 text-center">
           <img src="{{ '/assets/img/max-eder.png' | relative_url }}"
                alt="Funding Organization Logo"
                class="img-fluid d-inline-block"
-               style="max-height: 120px;">
+               style="max-height: 120px; margin-left: 20px;">
         </div>
         <p class="mt-4" style="text-align: justify;">
           Was für funding, kleiner text?
@@ -154,6 +154,7 @@ title: Alig Lab
     </div>
   </div>
 </section>
+
 
 
 
