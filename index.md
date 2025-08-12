@@ -140,12 +140,10 @@ title: Alig Lab
   <div class="container">
     <div class="row justify-content-start">
       <div class="col-lg-10 offset-lg-1">
-        <!-- Now header is aligned like Publications/Contact -->
         <h2>Funding</h2>
 
-        <!-- Centered logo -->
         <div class="mt-4 text-center">
-          <img src="{{ '/assets/img/max-eder.png' | relative_url }}"
+          <img src="{{ '/assets/img/DKH_Logo_RGB_640x360px_72dpi.jpg' | relative_url }}"
                alt="Funding Organization Logo"
                class="img-fluid d-inline-block"
                style="max-height: 120px;">
