@@ -1,5 +1,5 @@
 ---
-name: Tobias Perings
+name: Tobias Perings, MSc
 role: PhD Student
 order: 2
 image: /assets/img/dummy.png
