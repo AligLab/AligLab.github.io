@@ -138,15 +138,22 @@ title: Alig Lab
 
 <section id="funding" class="py-5">
   <div class="container">
+    <!-- Heading aligned like Contact/Publications -->
     <h2>Funding</h2>
+    
+    <!-- Logo centered independently -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <img src="{{ '/assets/img/max-eder.png' | relative_url }}"
+             alt="Funding Organization Logo"
+             class="img-fluid d-inline-block"
+             style="max-height: 120px;">
+      </div>
+    </div>
+
+    <!-- Text block -->
     <div class="row justify-content-center">
       <div class="col-lg-10">
-        <div class="mt-4 text-center">
-          <img src="{{ '/assets/img/max-eder.png' | relative_url }}"
-               alt="Funding Organization Logo"
-               class="img-fluid d-inline-block"
-               style="max-height: 120px; margin-left: 20px;">
-        </div>
         <p class="mt-4" style="text-align: justify;">
           Was für funding, kleiner text?
         </p>
@@ -154,6 +161,7 @@ title: Alig Lab
     </div>
   </div>
 </section>
+
 
 
 
