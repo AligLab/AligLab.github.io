@@ -94,3 +94,8 @@ section { background: transparent; }
   display: inline-block;
 }
 
+.funding-text {
+  max-width: 600px; /* controls the block width */
+  margin: 0 auto;   /* centers the block */
+  text-align: justify; /* makes it a block style paragraph */
+}
