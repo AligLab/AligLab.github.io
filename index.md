@@ -146,7 +146,7 @@ title: Alig Lab
 
         <!-- Text -->
         <p class="mt-4 text-justify">
-          Was für funding, kleiner text?
+          Our lab is funded by the Max-Eder Junior Research Group Program of the German Cancer Aid (Deutsche Krebshilfe).
         </p>
       </div>
     </div>
