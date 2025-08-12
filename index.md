@@ -170,9 +170,9 @@ title: Alig Lab
       <div class="col-lg-9 offset-lg-1">
         <h2>Contact</h2>
         <address class="mb-3">
-          West German Cancer Center<br>
           Department of Hematology and Stem Cell Transplantation<br>
           University Hospital Essen<br>
+          WTZ Forschungsgebäude, 2nd Floor, Rooms 2.005–2.017<br>
           Hufelandstrasse 55<br>
           45147 Essen<br>
           Germany<br>
