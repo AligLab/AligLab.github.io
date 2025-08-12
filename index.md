@@ -169,7 +169,8 @@ title: Alig Lab
           Department of Hematology and Stem Cell Transplantation<br>
           University Hospital Essen<br>
           Hufelandstrasse 55<br>
-          D-45147 Essen<br>
+          45147 Essen<br>
+          Germany<br>
           <a href="mailto:{{ site.email }}">{{ site.email }}</a>
         </address>
       </div>
