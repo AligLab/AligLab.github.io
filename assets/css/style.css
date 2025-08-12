@@ -93,7 +93,7 @@ section { background: transparent; }
 }
 
 .funding-logo {
-  max-height: 120px; /* adjust to make it bigger */
+  max-height: 200px; /* adjust to make it bigger */
   width: auto;
   margin-top: 10px; /* space between text and logo */
 }
