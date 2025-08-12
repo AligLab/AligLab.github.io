@@ -135,26 +135,26 @@ title: Alig Lab
   <div class="container">
     <div class="row justify-content-start">
       <div class="col-lg-10 offset-lg-1">
-          <!-- Paragraph directly under heading+logo -->
+
+        <!-- Title -->
+        <h2>Funding</h2>
+
+        <!-- Text -->
         <p class="funding-text">
           Our lab is funded by the Max-Eder Junior Research Group Program of the German
           Cancer Aid (Deutsche Krebshilfe).
         </p>
-       
-        <!-- Heading + Logo in one row -->
-        <div class="d-flex align-items-center gap-3 mb-3">
-          <h2 class="mb-0">Funding</h2>
-          <img src="{{ '/assets/img/DKH_Logo_RGB_640x360px_72dpi.jpg' | relative_url }}"
-               alt="Funding Organization Logo"
-               class="funding-logo">
-        </div>
 
-      
+        <!-- Logo -->
+        <img src="{{ '/assets/img/DKH_Logo_RGB_640x360px_72dpi.jpg' | relative_url }}"
+             alt="Funding Organization Logo"
+             class="funding-logo mt-3">
 
       </div>
     </div>
   </div>
 </section>
+
 
 
 
