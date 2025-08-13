@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Alig Lab
+description: "Alig Lab led by Stefan Alig"
 ---
 
 <section class="hero">
