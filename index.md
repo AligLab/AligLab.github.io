@@ -50,7 +50,7 @@ description: "Alig Lab led by Stefan Alig"
       {%- endfor -%}
     </div>
 
-    {%- assign others = site.members | where_exp: "p", "p.role != 'Group Leader & Clinician Scientist'" | sort: "order" -%}
+    {%- assign others = site.members | where_exp: "p", "p.role != 'Group Leader &<br>Clinician Scientist'" | sort: "order" -%}
     <div class="row g-3 justify-content-center">
       {%- for person in others -%}
       <div class="col-6 col-md-4 col-lg-3">
