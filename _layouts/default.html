@@ -1,34 +1,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index,follow">
   <meta name="google-site-verification" content="Exv3c3L3I1BmjF7Zljuq5mDQaqBC01CxEjUKakSe2wM">
 
-  <!-- Favicons -->
-  <link rel="icon" href="{{ '/falvicon.ico' | relative_url }}" type="image/x-icon">
-  <link rel="icon" href="{{ '/assets/img/falvicon.png' | relative_url }}" type="image/png">
+  <!-- Favicons (fixed typos + sizes) -->
+  <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
+  <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}" type="image/png">
 
   <!-- Title + meta -->
   <title>{% if page.title %}{{ page.title }} – Stegan Alig – Alig Lab{% else %}Stegan Alig – Alig Lab{% endif %}</title>
   <meta name="description" content="{{ page.description | default: 'Alig Lab led by Stegan Alig. Research, publications, team, contact.' }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
   <meta property="og:title" content="{% if page.title %}{{ page.title }} – Stegan Alig – Alig Lab{% else %}Stegan Alig – Alig Lab{% endif %}">
   <meta property="og:description" content="{{ page.description | default: 'Alig Lab led by Stegan Alig. Research, publications, team, contact.' }}">
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
-  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ '/assets/img/og-default.png' | absolute_url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} – Stegan Alig – Alig Lab{% else %}Stegan Alig – Alig Lab{% endif %}">
+  <meta name="twitter:description" content="{{ page.description | default: 'Alig Lab led by Stegan Alig. Research, publications, team, contact.' }}">
+  <meta name="twitter:image" content="{{ '/assets/img/og-default.png' | absolute_url }}">
 
-  <!-- Schema.org Person (helps ranking for the name) -->
+  <!-- Schema.org: site + org (keep Person markup on team cards, not here) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Stegan Alig",
-    "affiliation": {
-      "@type": "Organization",
-      "name": "Alig Lab"
-    },
-    "url": "{{ '/' | absolute_url }}"
+    "@type": ["WebSite","Organization"],
+    "name": "Alig Lab",
+    "url": "{{ '/' | absolute_url }}",
+    "logo": "{{ '/assets/img/favicon.png' | absolute_url }}",
+    "sameAs": [
+      "https://www.linkedin.com/company/aliglab"
+    ],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "{{ '/' | absolute_url }}?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   }
   </script>
 
@@ -36,6 +47,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
+</head>
+
 </head>
 
 <body>
