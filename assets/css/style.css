@@ -41,15 +41,18 @@ section { background: transparent; }
 #about, #team, #publications, #funding, #contact { background: #ffffff; }
 
 /* Team avatars: responsive circular, no overflow */
-#team .card img {
-  border-radius: 50%;
+/* Team card images */
+#team .card-img-top {
   object-fit: cover;
-  margin-top: 10px;
-  object-position: center top;
-  margin: 0 auto;
-  width: clamp(96px, 28vw, 160px);
-  height: clamp(96px, 28vw, 160px);
+  width: 100%;
+  height: 220px;         /* keep consistent height */
+  border-top-left-radius: 0.5rem; 
+  border-top-right-radius: 0.5rem;
+  margin-top: 10px;      /* push image down a bit */
+  padding: 5px;          /* add breathing space inside */
+  background: #fff;      /* so padding shows as white border */
 }
+
 @media (max-width: 360px) {
   #team .card img { width: 88px; height: 88px; }
 }
