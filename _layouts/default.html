@@ -4,49 +4,47 @@
   <meta name="robots" content="index,follow">
   <meta name="google-site-verification" content="Exv3c3L3I1BmjF7Zljuq5mDQaqBC01CxEjUKakSe2wM">
 
-  <!-- Favicons (fixed typos + sizes) -->
+  <!-- Favicons -->
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any">
   <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}" type="image/png">
 
-  <!-- Title + meta -->
+  {% assign sitetitle = site.title | default: "Alig Lab" %}
+  <!-- Title -->
   <title>
-  {% if page.title and page.title != "Alig Lab" %}
-    {{ page.title }} – Alig Lab – Stefan Alig
-  {% else %}
-    Alig Lab – Stefan Alig
-  {% endif %}
+    {% if page.title and page.title != sitetitle %}
+      {{ page.title }} – {{ sitetitle }} – Stefan Alig
+    {% else %}
+      {{ sitetitle }} – Stefan Alig
+    {% endif %}
   </title>
 
-  <meta name="description" content="{{ page.description | default: 'Alig Lab led by Stegan Alig. Research, publications, team, contact.' }}">
+  <!-- Meta -->
+  <meta name="description" content="{{ page.description | default: 'Alig Lab led by Stefan Alig. Research, publications, team, contact.' }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
   <!-- Open Graph / Twitter -->
+  {% assign full_title = page.title and page.title != sitetitle
+      | ternary: page.title | append: ' – ' | append: sitetitle | append: ' – Stefan Alig',
+                 sitetitle | append: ' – Stefan Alig' %}
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{% if page.title %}{{ page.title }} – Stegan Alig – Alig Lab{% else %}Stegan Alig – Alig Lab{% endif %}">
-  <meta property="og:description" content="{{ page.description | default: 'Alig Lab led by Stegan Alig. Research, publications, team, contact.' }}">
+  <meta property="og:title" content="{{ full_title }}">
+  <meta property="og:description" content="{{ page.description | default: 'Alig Lab led by Stefan Alig. Research, publications, team, contact.' }}">
   <meta property="og:url" content="{{ page.url | replace:'index.html','' | absolute_url }}">
   <meta property="og:image" content="{{ '/assets/img/og-default.png' | absolute_url }}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }} – Stegan Alig – Alig Lab{% else %}Stegan Alig – Alig Lab{% endif %}">
-  <meta name="twitter:description" content="{{ page.description | default: 'Alig Lab led by Stegan Alig. Research, publications, team, contact.' }}">
+  <meta name="twitter:title" content="{{ full_title }}">
+  <meta name="twitter:description" content="{{ page.description | default: 'Alig Lab led by Stefan Alig. Research, publications, team, contact.' }}">
   <meta name="twitter:image" content="{{ '/assets/img/og-default.png' | absolute_url }}">
 
-  <!-- Schema.org: site + org (keep Person markup on team cards, not here) -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": ["WebSite","Organization"],
-    "name": "Alig Lab",
+    "name": "{{ sitetitle }}",
     "url": "{{ '/' | absolute_url }}",
     "logo": "{{ '/assets/img/favicon.png' | absolute_url }}",
-    "sameAs": [
-      "https://www.linkedin.com/company/aliglab"
-    ],
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "{{ '/' | absolute_url }}?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "sameAs": ["https://www.linkedin.com/company/aliglab"]
   }
   </script>
 
@@ -55,9 +53,6 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link href="{{ '/assets/css/style.css' | relative_url }}" rel="stylesheet">
 </head>
-
-</head>
-
 <body>
   {% include nav.html %}
   {{ content }}
@@ -67,16 +62,16 @@
   {% include footer.html %}
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-  document.querySelectorAll('#nav .nav-link').forEach(function (link) {
-    link.addEventListener('click', function () {
-      let navbar = document.getElementById('nav');
-      if (navbar.classList.contains('show')) {
-        let bsCollapse = bootstrap.Collapse.getInstance(navbar);
-        bsCollapse.hide();
-      }
+    // Auto-close mobile nav on link click
+    document.addEventListener('DOMContentLoaded', function () {
+      var navbar = document.getElementById('nav');
+      document.querySelectorAll('#nav .nav-link').forEach(function (link) {
+        link.addEventListener('click', function () {
+          var inst = bootstrap.Collapse.getInstance(navbar) || new bootstrap.Collapse(navbar, { toggle: false });
+          if (navbar.classList.contains('show')) inst.hide();
+        });
+      });
     });
-  });
-</script>
-
+  </script>
 </body>
 </html>
