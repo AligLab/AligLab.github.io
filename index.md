@@ -28,63 +28,52 @@ description: "Alig Lab led by Stefan Alig"
   <div class="container text-center">
     <h2>Team</h2>
 
-    {%- assign leader = site.members | where: "role", "Group Leader &<br>Clinician Scientist" -%}
+    {%- assign leader = site.members | where: "role", "Group Leader & Clinician Scientist" -%}
     <div class="row justify-content-center mb-4">
       {%- for person in leader -%}
       <div class="col-6 col-md-4 col-lg-3">
-        <div class="card h-100">
-          {%- if person.image -%}
-          <img class="card-img-top" src="{{ person.image | relative_url }}" alt="{{ person.name }}">
-          {%- endif -%}
+        <article class="card h-100" itemscope itemtype="https://schema.org/Person">
+          {% if person.image %}
+          <img class="card-img-top" src="{{ person.image | relative_url }}" alt="{{ person.name | escape }}" itemprop="image">
+          {% endif %}
           <div class="card-body">
-            <h5 class="card-title">{{ person.name }}</h5>
-            <p class="card-text small text-muted">{{ person.role }}</p>
+            <h3 class="card-title h5 mb-1" itemprop="name">{{ person.name }}</h3>
+            <p class="card-text small text-muted" itemprop="jobTitle">{{ person.role }}</p>
             <div class="d-flex justify-content-center gap-3 mt-2">
-              {%- if person.email -%}
-              <a href="mailto:{{ person.email }}" title="Email"><i class="bi bi-envelope-fill fs-5"></i></a>
-              {%- endif -%}
-              {%- if person.linkedin -%}
-              <a href="{{ person.linkedin }}" target="_blank" title="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
-              {%- endif -%}
-              {%- if person.twitter or person.X -%}
-              <a href="{{ person.twitter | default: person.X }}" target="_blank" title="X"><i class="bi bi-twitter-x fs-5"></i></a>
-              {%- endif -%}
+              {% if person.email %}<a href="mailto:{{ person.email | escape }}" title="Email" itemprop="email"><i class="bi bi-envelope-fill fs-5"></i></a>{% endif %}
+              {% if person.linkedin %}<a href="{{ person.linkedin | escape }}" target="_blank" rel="nofollow" title="LinkedIn" itemprop="sameAs"><i class="bi bi-linkedin fs-5"></i></a>{% endif %}
+              {% if person.twitter or person.X %}<a href="{{ person.twitter | default: person.X | escape }}" target="_blank" rel="nofollow" title="X" itemprop="sameAs"><i class="bi bi-twitter-x fs-5"></i></a>{% endif %}
             </div>
           </div>
-        </div>
+        </article>
       </div>
       {%- endfor -%}
     </div>
 
-    {%- assign others = site.members | where_exp: "p", "p.role != 'Group Leader &<br>Clinician Scientist'" | sort: "order" -%}
+    {%- assign others = site.members | where_exp: "p", "p.role != 'Group Leader & Clinician Scientist'" | sort: "order" -%}
     <div class="row g-3 justify-content-center">
       {%- for person in others -%}
       <div class="col-6 col-md-4 col-lg-3">
-        <div class="card h-100">
-          {%- if person.image -%}
-          <img class="card-img-top" src="{{ person.image | relative_url }}" alt="{{ person.name }}">
-          {%- endif -%}
+        <article class="card h-100" itemscope itemtype="https://schema.org/Person">
+          {% if person.image %}
+          <img class="card-img-top" src="{{ person.image | relative_url }}" alt="{{ person.name | escape }}" itemprop="image">
+          {% endif %}
           <div class="card-body">
-            <h5 class="card-title">{{ person.name }}</h5>
-            <p class="card-text small text-muted">{{ person.role }}</p>
+            <h3 class="card-title h5 mb-1" itemprop="name">{{ person.name }}</h3>
+            <p class="card-text small text-muted" itemprop="jobTitle">{{ person.role }}</p>
             <div class="d-flex justify-content-center gap-3 mt-2">
-              {%- if person.email -%}
-              <a href="mailto:{{ person.email }}" title="Email"><i class="bi bi-envelope-fill fs-5"></i></a>
-              {%- endif -%}
-              {%- if person.linkedin -%}
-              <a href="{{ person.linkedin }}" target="_blank" title="LinkedIn"><i class="bi bi-linkedin fs-5"></i></a>
-              {%- endif -%}
-              {%- if person.twitter or person.X -%}
-              <a href="{{ person.twitter | default: person.X }}" target="_blank" title="X"><i class="bi bi-twitter-x fs-5"></i></a>
-              {%- endif -%}
+              {% if person.email %}<a href="mailto:{{ person.email | escape }}" title="Email" itemprop="email"><i class="bi bi-envelope-fill fs-5"></i></a>{% endif %}
+              {% if person.linkedin %}<a href="{{ person.linkedin | escape }}" target="_blank" rel="nofollow" title="LinkedIn" itemprop="sameAs"><i class="bi bi-linkedin fs-5"></i></a>{% endif %}
+              {% if person.twitter or person.X %}<a href="{{ person.twitter | default: person.X | escape }}" target="_blank" rel="nofollow" title="X" itemprop="sameAs"><i class="bi bi-twitter-x fs-5"></i></a>{% endif %}
             </div>
           </div>
-        </div>
+        </article>
       </div>
       {%- endfor -%}
     </div>
   </div>
 </section>
+
 
 <section id="publications" class="py-5">
   <div class="container">
