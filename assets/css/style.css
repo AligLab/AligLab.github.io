@@ -96,3 +96,12 @@ section { background: transparent; }
 
 /* Anchor scroll offset (match navbar height) */
 html { scroll-padding-top: 20px; }
+
+
+/* Equal-height team cards */
+#team .row > [class^="col"] { display: flex; }          /* make columns equalize */
+#team .card { display: flex; flex-direction: column; width: 100%; }
+#team .card-img-top { flex: 0 0 auto; }                 /* image keeps size */
+#team .card-body { display: flex; flex-direction: column; flex: 1 1 auto; }
+#team .card-footer { margin-top: auto; }                /* footer sticks to bottom */
+
