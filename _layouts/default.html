@@ -1,3 +1,5 @@
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,23 +11,17 @@
   <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}" type="image/png">
 
   {% assign sitetitle = site.title | default: "Alig Lab" %}
-  <!-- Title -->
-  <title>
-    {% if page.title and page.title != sitetitle %}
-      {{ page.title }} – {{ sitetitle }} – Stefan Alig
-    {% else %}
-      {{ sitetitle }} – Stefan Alig
-    {% endif %}
-  </title>
+  {% if page.title and page.title != sitetitle %}
+    {% assign full_title = page.title | append: " – " | append: sitetitle | append: " – Stefan Alig" %}
+  {% else %}
+    {% assign full_title = sitetitle | append: " – Stefan Alig" %}
+  {% endif %}
 
-  <!-- Meta -->
+  <title>{{ full_title }}</title>
   <meta name="description" content="{{ page.description | default: 'Alig Lab led by Stefan Alig. Research, publications, team, contact.' }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
   <!-- Open Graph / Twitter -->
-  {% assign full_title = page.title and page.title != sitetitle
-      | ternary: page.title | append: ' – ' | append: sitetitle | append: ' – Stefan Alig',
-                 sitetitle | append: ' – Stefan Alig' %}
   <meta property="og:type" content="website">
   <meta property="og:title" content="{{ full_title }}">
   <meta property="og:description" content="{{ page.description | default: 'Alig Lab led by Stefan Alig. Research, publications, team, contact.' }}">
@@ -55,16 +51,20 @@
 </head>
 <body>
   {% include nav.html %}
-  {{ content }}
 
-  <main class="container mt-5 pt-4"></main>
+  <main class="container mt-5 pt-4">
+    {{ content }}
+  </main>
 
   {% include footer.html %}
+
+  <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Auto-close mobile nav on link click
+    // Auto-close mobile nav on link tap
     document.addEventListener('DOMContentLoaded', function () {
       var navbar = document.getElementById('nav');
+      if (!navbar) return;
       document.querySelectorAll('#nav .nav-link').forEach(function (link) {
         link.addEventListener('click', function () {
           var inst = bootstrap.Collapse.getInstance(navbar) || new bootstrap.Collapse(navbar, { toggle: false });
