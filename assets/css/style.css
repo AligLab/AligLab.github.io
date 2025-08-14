@@ -44,6 +44,7 @@ section { background: transparent; }
 #team .card img {
   border-radius: 50%;
   object-fit: cover;
+  margin-top: 10px;
   object-position: center top;
   margin: 0 auto;
   width: clamp(96px, 28vw, 160px);
