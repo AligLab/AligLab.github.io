@@ -9,7 +9,13 @@
   <link rel="icon" href="{{ '/assets/img/favicon.png' | relative_url }}" type="image/png">
 
   <!-- Title + meta -->
-  <title>{% if page.title %}{{ page.title }} – Stefan Alig – Alig Lab{% else %}Stefan Alig – Alig Lab{% endif %}</title>
+  <title>
+    {% if page.title %}
+      {{ page.title }} – Alig Lab – Stefan Alig
+    {% else %}
+      Alig Lab – Stefan Alig
+    {% endif %}
+  </title>
   <meta name="description" content="{{ page.description | default: 'Alig Lab led by Stegan Alig. Research, publications, team, contact.' }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
