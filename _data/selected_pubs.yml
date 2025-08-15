@@ -1,4 +1,10 @@
 # Selected publications (display-ready authors)
+- title: "Remission Assessment by Circulating Tumor DNA in Large B-Cell Lymphoma"
+  authors_display: "Mark Roschewski et al."
+  venue: Journal of Clinical Oncology
+  year: 2025 
+  url: https://doi.org/10.1200/JCO-25-01534
+
 - title: "Distinct Hodgkin lymphoma subtypes defined by noninvasive genomic profiling"
   authors_display: "Alig et al."
   venue: Nature
@@ -40,9 +46,4 @@
   venue: Nature Biotechnology
   year: 2021
   url: https://doi.org/10.1038/s41587-021-00981-w
-- title: "Remission Assessment by Circulating Tumor DNA in Large B-Cell Lymphoma"
-  authors_display: "Mark Roschewski et al."
-  venue: Journal of Clinical Oncology
-  year: 2025 
-  url: https://doi.org/10.1200/JCO-25-01534
 
