@@ -104,3 +104,16 @@ html { scroll-padding-top: 20px; }
 #team .card-body { display: flex; flex-direction: column; flex: 1 1 auto; }
 #team .card-footer { margin-top: auto; }                /* footer sticks to bottom */
 
+
+.news-card { max-width: 720px; margin: 2rem auto; padding: 1.5rem; border-radius: 14px; 
+  box-shadow: 0 10px 24px rgba(0,0,0,.08); background:#fff }
+.news-title { font-size: 2.4rem; margin: 0 0 .25rem }
+.news-sub { margin: 0 0 1rem; color:#666 }
+.timeline-wrap { position: relative; overflow: hidden; max-height: 520px; border-radius: 10px }
+.timeline-wrap.fade-out::after { content:""; position:absolute; left:0; right:0; bottom:0; height:80px;
+  background: linear-gradient(180deg, rgba(255,255,255,0), #fff) }
+.news-btn { display:block; margin: 1rem auto 0; padding:.6rem 1rem; border:0; border-radius:10px;
+  background:#3b82f6; color:#fff; font-weight:600; cursor:pointer }
+.news-btn:focus { outline: 2px solid #3b82f6; outline-offset:2px }
+
+
