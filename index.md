@@ -128,7 +128,7 @@ description: "Alig Lab led by Stefan Alig"
   <!-- X / Twitter timeline -->
   <div class="timeline-wrap" id="timelineWrap">
     <a class="twitter-timeline"
-       href="[https://twitter.com/YourHandl](https://x.com/stefanalig?lang=de)"
+       href="https://x.com/stefanalig?lang=de"
        data-theme="light"
        data-chrome="noheader nofooter transparent"
        data-tweet-limit="5"
