@@ -121,38 +121,7 @@ description: "Alig Lab led by Stefan Alig"
 </section>
 
 
-<section class="news-card">
-  <h2 class="news-title">Latest Updates</h2>
-  <p class="news-sub">News feed</p>
 
-  <!-- X / Twitter timeline -->
-  <div class="timeline-wrap" id="timelineWrap">
-    <a class="twitter-timeline"
-       href="https://x.com/stefanalig?lang=de"
-       data-theme="light"
-       data-chrome="noheader nofooter transparent"
-       data-tweet-limit="5"
-       data-dnt="true">
-      Tweets by Stefan Alig
-    </a>
-  </div>
-
-  <button id="loadMore" class="news-btn" type="button">Load More</button>
-
-  <script async src="https://platform.twitter.com/widgets.js"></script>
-  <script>
-    // expand/collapse
-    const btn = document.getElementById('loadMore');
-    const wrap = document.getElementById('timelineWrap');
-    let expanded = false;
-    btn.onclick = () => {
-      expanded = !expanded;
-      wrap.style.maxHeight = expanded ? '1200px' : '520px';
-      wrap.classList.toggle('fade-out', !expanded);
-      btn.textContent = expanded ? 'Collapse' : 'Load More';
-    };
-  </script>
-</section>
 
 
 
