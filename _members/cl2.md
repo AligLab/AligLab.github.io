@@ -1,5 +1,5 @@
 ---
-name: Suzan Elmaagacli
+name: Suzan Elmaagacli, MD
 role: Clinician Scientist
 order: 2
 image: /assets/img/cl2.jpeg
