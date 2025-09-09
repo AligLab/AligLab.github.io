@@ -119,53 +119,31 @@ html { scroll-padding-top:20px; }
 }
 .news-btn:focus { outline:2px solid #3b82f6; outline-offset:2px; }
 
-/* ========== Top-gap removal ========== */
-/* Header container: zero all spacing and borders */
-.site-header,
-header[role="banner"],
-.navbar,
-.navbar-default,
-.navbar-light,
-.navbar-dark {
-  margin:0 !important;
-  padding:0 !important;
-  border:0 !important;
-  box-shadow:none !important;
+/* header fixed at top */
+.site-header, header[role="banner"] {
+  position: sticky; /* or fixed if you prefer */
+  top: 0;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-shadow: none;
+  background: #fff; /* keep nav readable over hero */
 }
 
-/* Kill heading margins inside header */
-.site-header h1,
-.site-header .site-title,
-header[role="banner"] h1 { margin:0 !important; }
+/* reserve dynamic header space before content */
+:root { --header-h: 60px; }   /* default fallback */
+body { margin: 0; padding: 0; }
 
-/* If theme adds bottom gap on navbars */
-.navbar { margin-bottom:0 !important; }
-
-/* First block under header */
-header + .hero,
-header + main,
-header + section,
-.hero,
-.page-header,
-.page-content:first-child,
-main > section:first-child {
-  margin-top:0 !important;
-  padding-top:0 !important;
+/* hero sits exactly below header */
+.hero {
+  margin: 0;
+  padding-top: 0;
+  min-height: calc(90vh - var(--header-h));
+  /* your existing background etc. keep as-is */
 }
 
-/* Ensure hero image area has no inline-gap issues */
-.hero img,
-.page-header img,
-.banner img,
-.cover img {
-  display:block;
-  margin-top:0 !important;
+/* push the whole content down by header height */
+main, .page-content, header + section, header + .hero {
+  margin-top: var(--header-h);
 }
-
-/* Safety: remove any body padding added for sticky headers */
-body.has-fixed-header,
-body[style*="padding-top"] { padding-top:0 !important; }
-
-/* Last-resort hairline fix for 1px borders on some themes */
-.site-header, .navbar, header[role="banner"] { border-bottom:0 !important; }
-.hero { margin-top:-1px; } /* harmless if no border exists */
