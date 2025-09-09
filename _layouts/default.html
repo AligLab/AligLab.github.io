@@ -75,6 +75,16 @@
         });
       });
     });
+  <!-- Fix header gap for hero -->
+  <script>
+  (function () {
+    const header = document.querySelector('.site-header') || document.querySelector('header[role="banner"]');
+    if (!header) return;
+    const setH = () => document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+    setH();
+    new ResizeObserver(setH).observe(header);
+    window.addEventListener('resize', setH);
+  })();
   </script>
 </body>
 </html>
