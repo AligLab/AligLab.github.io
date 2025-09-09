@@ -116,19 +116,31 @@ html { scroll-padding-top: 20px; }
   background:#3b82f6; color:#fff; font-weight:600; cursor:pointer }
 .news-btn:focus { outline: 2px solid #3b82f6; outline-offset:2px }
 
-body {
-  margin: 0;
-  padding: 0;
+/* kill default gaps */
+html, body { margin:0; padding:0; }
+
+/* header row */
+.site-header, header[role="banner"] {
+  margin:0 !important;
+  padding:0 !important;
+  border:0 !important;
+  box-shadow:none !important;
 }
 
-.site-header {
-  margin: 0;
-  padding: 0;
+/* first block under the header (hero/banner/main image wrapper) */
+.hero, .page-header, .page-content:first-child, main > section:first-child {
+  margin-top:0 !important;
+  padding-top:0 !important;
 }
 
-.hero, .page-content {
-  margin-top: 0;
-  padding-top: 0;
+/* the main image itself */
+.hero img, .page-header img, .banner img, .cover img {
+  display:block;         /* removes inline whitespace */
+  margin-top:0 !important;
 }
+
+/* safety: if the header is sticky and someone added body padding */
+body.has-fixed-header,
+body[style*="padding-top"] { padding-top:0 !important; }
 
 
