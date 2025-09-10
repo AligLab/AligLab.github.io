@@ -64,17 +64,23 @@
   <!-- JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Auto-close mobile nav on link tap
-    document.addEventListener('DOMContentLoaded', function () {
-      var navbar = document.getElementById('nav');
-      if (!navbar) return;
-      document.querySelectorAll('#nav .nav-link').forEach(function (link) {
-        link.addEventListener('click', function () {
-          var inst = bootstrap.Collapse.getInstance(navbar) || new bootstrap.Collapse(navbar, { toggle: false });
-          if (navbar.classList.contains('show')) inst.hide();
-        });
-      });
-    });
+document.addEventListener('DOMContentLoaded', function () {
+  var nav = document.getElementById('nav');               // the .collapse element
+  if (!nav) return;
+  var bs = bootstrap.Collapse.getOrCreateInstance(nav, { toggle: false });
+
+  // delegate to any link inside the collapsed nav (including dropdown items)
+  document.addEventListener('click', function (e) {
+    if (!nav.classList.contains('show')) return;
+
+    var link = e.target.closest('#nav a.nav-link, #nav .dropdown-item');
+    if (!link) return;
+
+    // allow hash navigation to update, then hide
+    setTimeout(function () { bs.hide(); }, 50);
+  });
+});
+</script>
   <!-- Fix header gap for hero -->
   <script>
   (function () {
