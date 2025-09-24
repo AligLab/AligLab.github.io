@@ -165,6 +165,7 @@ description: "Alig Lab led by Stefan Alig"
       <div class="col-lg-9 offset-lg-1">
         <h2>Contact</h2>
         <address class="mb-3">
+          Alig Lab
           Klinik für Hämatologie und Stammzelltransplantation<br>
           Universitätsklinikum Essen<br>
           WTZ Forschungsgebäude, 2.OG, Räume 2.005–2.017<br>
