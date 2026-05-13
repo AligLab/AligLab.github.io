@@ -74,12 +74,12 @@ section { background:transparent; }
 .card-body a[href*="linkedin.com"]:hover { color:#084182; }
 
 /* Funding */
-.funding-header { display:block; }
 .funding-text {
-  max-width:800px;
-  margin:0;
-  text-align:justify;
+  max-width: 800px;
+  margin: 0;
+  text-align: justify;
 }
+
 .funding-logos {
   margin-top: 2rem;
 }
@@ -97,42 +97,29 @@ section { background:transparent; }
   max-height: 110px;
   width: auto;
   object-fit: contain;
-}
-
-.dfg-logo {
-  max-height: 140px;
-}
-@media (max-width:768px) { .funding-logo { max-height:120px; } }
-@media (max-width:480px) { .funding-logo { max-height:100px; } }
-/* Funding logos row */
-.funding-logos {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
-
-.funding-logos img {
-  max-height: 120px;
-  width: auto;
-  object-fit: contain;
   background: #fff;
   padding: 0.5rem;
 }
 
-/* Optional: make SVG logos slightly larger */
-.funding-logos img.svg-logo {
-  max-height: 140px;
+.funding-row img.svg-logo {
+  max-height: 130px;
+}
+
+.dfg-logo {
+  max-height: 140px !important;
 }
 
 @media (max-width: 768px) {
-  .funding-logos {
-    justify-content: center;
+  .funding-row {
+    gap: 2rem;
   }
 
-  .funding-logos img {
+  .funding-row img {
     max-height: 90px;
+  }
+
+  .dfg-logo {
+    max-height: 110px !important;
   }
 }
 /* Anchor scroll offset (match navbar height if needed) */
