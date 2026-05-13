@@ -90,7 +90,37 @@ section { background:transparent; }
 }
 @media (max-width:768px) { .funding-logo { max-height:120px; } }
 @media (max-width:480px) { .funding-logo { max-height:100px; } }
+/* Funding logos row */
+.funding-logos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
 
+.funding-logos img {
+  max-height: 120px;
+  width: auto;
+  object-fit: contain;
+  background: #fff;
+  padding: 0.5rem;
+}
+
+/* Optional: make SVG logos slightly larger */
+.funding-logos img.svg-logo {
+  max-height: 140px;
+}
+
+@media (max-width: 768px) {
+  .funding-logos {
+    justify-content: center;
+  }
+
+  .funding-logos img {
+    max-height: 90px;
+  }
+}
 /* Anchor scroll offset (match navbar height if needed) */
 html { scroll-padding-top:20px; }
 
