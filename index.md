@@ -156,7 +156,7 @@ description: "Alig Lab led by Stefan Alig"
   >
 
 </div>
-</section>
+
 
 
 
