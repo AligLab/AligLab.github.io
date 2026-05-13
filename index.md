@@ -134,29 +134,36 @@ description: "Alig Lab led by Stefan Alig"
         <h2>Funding</h2>
 
         <div class="funding-logos">
-          <img
-            src="{{ '/assets/img/DKH.jpg' | relative_url }}"
-            alt="German Cancer Aid Logo"
-          >
 
-          <img
-            src="{{ '/assets/img/dfg_logo_englisch_blau_en.jpg' | relative_url }}"
-            alt="DFG Logo"
-          >
+  <!-- top row -->
+  <div class="funding-row">
+    <img
+      src="{{ '/assets/img/dfg_logo_englisch_blau_en.jpg' | relative_url }}"
+      alt="DFG Logo"
+      class="dfg-logo"
+    >
+  </div>
 
-          <img
-            src="{{ '/assets/img/sfb1530.svg' | relative_url }}"
-            alt="SFB1530 Logo"
-            class="svg-logo"
-          >
+  <!-- bottom row -->
+  <div class="funding-row">
+    <img
+      src="{{ '/assets/img/DKH.jpg' | relative_url }}"
+      alt="German Cancer Aid Logo"
+    >
 
-          <img
-            src="{{ '/assets/img/Logo-Kroener-Fresenius-Stiftung.svg.png' | relative_url }}"
-            alt="Else Kröner-Fresenius-Stiftung Logo"
-          >
-        </div>
+    <img
+      src="{{ '/assets/img/sfb1530.svg' | relative_url }}"
+      alt="SFB1530 Logo"
+      class="svg-logo"
+    >
 
-      </div>
+    <img
+      src="{{ '/assets/img/Logo-Kroener-Fresenius-Stiftung.svg.png' | relative_url }}"
+      alt="Else Kröner-Fresenius-Stiftung Logo"
+    >
+  </div>
+
+</div>
     </div>
   </div>
 </section>
