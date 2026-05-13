@@ -131,19 +131,30 @@ description: "Alig Lab led by Stefan Alig"
     <div class="row justify-content-start">
       <div class="col-lg-10 offset-lg-1">
 
-        <!-- Title -->
         <h2>Funding</h2>
 
-        <!-- Text -->
-        <p class="funding-text">
-          Our lab is funded by the Max-Eder Junior Research Group Program of the 
-          German Cancer Aid (Deutsche Krebshilfe).
-        </p>
+        <div class="funding-logos">
+          <img
+            src="{{ '/assets/img/DKH.jpg' | relative_url }}"
+            alt="German Cancer Aid Logo"
+          >
 
-        <!-- Logo -->
-        <img src="{{ '/assets/img/DKH.jpg' | relative_url }}"
-             alt="Funding Organization Logo"
-             class="funding-logo mt-3">
+          <img
+            src="{{ '/assets/img/dfg_logo_englisch_blau_en.jpg' | relative_url }}"
+            alt="DFG Logo"
+          >
+
+          <img
+            src="{{ '/assets/img/sfb1530.svg' | relative_url }}"
+            alt="SFB1530 Logo"
+            class="svg-logo"
+          >
+
+          <img
+            src="{{ '/assets/img/Logo-Kroener-Fresenius-Stiftung.svg.png' | relative_url }}"
+            alt="Else Kröner-Fresenius-Stiftung Logo"
+          >
+        </div>
 
       </div>
     </div>
