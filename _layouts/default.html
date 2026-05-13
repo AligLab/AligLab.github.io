@@ -58,7 +58,37 @@
  
     {{ content }}
   </main>
+<section id="funding" class="py-5 bg-white">
+  <div class="container">
 
+    <h2 class="mb-4">Funding</h2>
+
+    <p class="funding-text">
+      Supported by the Deutsche Forschungsgemeinschaft (DFG),
+      SFB1530, and the Else Kröner-Fresenius-Stiftung.
+    </p>
+
+    <div class="funding-logos">
+
+      <img
+        src="{{ '/assets/img/dfg_logo_englisch_blau_en.jpg' | relative_url }}"
+        alt="DFG Logo"
+      >
+
+      <img
+        src="{{ '/assets/img/sfb1530.svg' | relative_url }}"
+        alt="SFB1530 Logo"
+        class="svg-logo"
+      >
+
+      <img
+        src="{{ '/assets/img/Logo-Kroener-Fresenius-Stiftung.svg.png' | relative_url }}"
+        alt="Else Kröner-Fresenius-Stiftung Logo"
+      >
+
+    </div>
+  </div>
+</section>
   {% include footer.html %}
 
   <!-- JS -->
