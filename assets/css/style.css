@@ -76,50 +76,38 @@ section { background:transparent; }
 /* Funding */
 .funding-text {
   max-width: 800px;
-  margin: 0;
+  margin: 0 auto;
   text-align: justify;
 }
 
 .funding-logos {
-  margin-top: 2rem;
-}
-
-.funding-row {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem 3rem;
+  max-width: 700px;
+  margin: 2.5rem auto 0;
   align-items: center;
-  gap: 3rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
+  justify-items: center;
 }
 
-.funding-row img {
-  max-height: 110px;
-  width: auto;
+.funding-logos img {
+  width: 100%;
+  max-width: 260px;
+  height: 120px;
   object-fit: contain;
   background: #fff;
   padding: 0.5rem;
 }
 
-.funding-row img.svg-logo {
-  max-height: 130px;
-}
-
-.dfg-logo {
-  max-height: 140px !important;
-}
-
 @media (max-width: 768px) {
-  .funding-row {
-    gap: 2rem;
+  .funding-logos {
+    grid-template-columns: 1fr;
+    max-width: 320px;
   }
 
-  .funding-row img {
-    max-height: 90px;
-  }
-
-  .dfg-logo {
-    max-height: 110px !important;
+  .funding-logos img {
+    max-width: 220px;
+    height: 100px;
   }
 }
 /* Anchor scroll offset (match navbar height if needed) */
