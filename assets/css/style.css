@@ -80,13 +80,27 @@ section { background:transparent; }
   margin:0;
   text-align:justify;
 }
-.funding-logo {
-  display:block;
-  width:auto;
-  height:auto;
-  max-height:160px;
-  max-width:100%;
-  margin-top:12px;
+.funding-logos {
+  margin-top: 2rem;
+}
+
+.funding-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.funding-row img {
+  max-height: 110px;
+  width: auto;
+  object-fit: contain;
+}
+
+.dfg-logo {
+  max-height: 140px;
 }
 @media (max-width:768px) { .funding-logo { max-height:120px; } }
 @media (max-width:480px) { .funding-logo { max-height:100px; } }
