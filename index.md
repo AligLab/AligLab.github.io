@@ -155,6 +155,12 @@ description: "Alig Lab led by Stefan Alig"
     alt="Else Kröner-Fresenius-Stiftung Logo"
   >
 
+  <img
+    class="funding-logo-wide"
+    src="{{ '/assets/img/wtz-dktk-logo.png' | relative_url }}"
+    alt="WTZ Westdeutsches Tumorzentrum and DKTK Partner Site Essen/Düsseldorf Logo"
+  >
+
 </div>
      </div>
 

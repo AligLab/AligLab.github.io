@@ -99,6 +99,11 @@ section { background:transparent; }
   padding: 0.5rem;
 }
 
+.funding-logos img.funding-logo-wide {
+  grid-column: 1 / -1;
+  max-width: 420px;
+}
+
 @media (max-width: 768px) {
   .funding-logos {
     grid-template-columns: 1fr;
